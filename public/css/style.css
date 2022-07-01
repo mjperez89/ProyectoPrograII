@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-image: url(../images/soccer-ball-white-line-stadium.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.navbar {
+    background-color: transparent !important;
+    font-size: 1.2rem;
+  }
+h1{
+    text-align: center;
+    font-size: 2rem;
+}
+.tabla{
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+    justify-content: space-evenly;
+}
+.th{
+    font-size: 2rem;
+    color: black;
+}

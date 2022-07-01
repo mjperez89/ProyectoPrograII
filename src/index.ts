@@ -6,12 +6,17 @@ import MedioCampistas from "./Jugadores/MedioCampista";
 import Delanteros, { Delantero } from "./Jugadores/Delantero";
 import MedioCampista from "./Jugadores/MedioCampista";
 
+
 const PORT = 5005;
 const app = express();
 
 app.use(express.json());
 
 app.use(express.urlencoded({extended:true}));
+
+app.use(express.static(path.join(__dirname, "..", "/public")));
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "..", "views"));
 
 app.set("views",path.join(__dirname,"..","views"));
 
@@ -26,12 +31,12 @@ app.get('/arqueros', (req: Request, res: Response) =>{
     const a1 = new Arquero("Dibu", "Martinez",28,"WestHam" )
     const a2= new Arquero("Franco","Armani", 32, "River")
     const a3= new Arquero("Geronimo","Rulli", 30, "Villareal")
-    const a4= new Arquero("Agustin","Rossi", 28, "Boke")
+    const a4= new Arquero("Agustin","Rossi", 28, "Boca")
 
     a4.entrenar()
 
     const listaArqueros= [a1,a2,a3,a4]
-
+ 
 
     res.render('pages/jugadores/arqueros', {arqueros: listaArqueros})
 });
@@ -59,7 +64,7 @@ app.get('/defensores',(req:Request, res:Response) => {
     const def11 = new Defensor("Nehuen", "Perez",22,"Atletico Madrid" )
     const def12 = new Defensor("Marcos", "Acuña",30,"Sevilla" )
 
-    const listaDefensores= [def1,def2,def3,def4,def5,def6,def7,def8,def9,def10,def12]
+    const listaDefensores= [def1,def2,def3,def4,def5,def6,def7,def8,def9,def10,def11,def12]
     res.render('pages/jugadores/defensores', {defensores:listaDefensores})
 });
 
