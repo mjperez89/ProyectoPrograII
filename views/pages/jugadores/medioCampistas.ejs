@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Mediocampistas</title>
+</head>
+<body>
+
+    <table style="border: solid 2px #000;">
+        <h1>Medio Campistas Seleccion Argentina</h1>
+        <% medioCampistas.forEach(function(medio){ %>
+            <tr>
+                <th><%= medio.nombre %></th>
+                <th><%= medio.apellido %></th>
+                <th><%= medio.edad %></th>
+                <th><%= medio.equipo %></th>
+                <th><%= medio.energia %></th>
+                
+                
+            </tr>
+
+       
+        <% }); %>
+      
+    </table>
+
+    <button>
+        <a href="/">Volver Home</a>
+    </button>
+
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Delanteros</title>
+</head>
+<body>
+
+    <table style="border: solid 2px #000;">
+        <h1>Delanteros Seleccion Argentina</h1>
+        <% delanteros.forEach(function(adelante){ %>
+            <tr>
+                <th><%= adelante.nombre %></th>
+                <th><%= adelante.apellido %></th>
+                <th><%= adelante.edad %></th>
+                <th><%= adelante.equipo %></th>
+                <th><%= adelante.energia %></th>
+                
+                
+            </tr>
+        <% }); %>
+      
+    </table>
+
+    <button>
+        <a href="/">Volver Home</a>
+    </button>
+    
+</body>
+</html>
